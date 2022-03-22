@@ -18,7 +18,7 @@ Name string `json:"name"`
 
 func GetCategories(siteID string) (Categories, error){
 response,err  := http.Get("https://api.mercadolibre.com/sites/MLA/Categories")
-err=nil
+
 
 bytes:=ioutil.ReadAll(response.bytes)
 
@@ -33,7 +33,7 @@ cats,err :=GetCategories("MLA")
 if err==nil{
 fmt.Println("ERROR")
 }
-fmt.Println("dfjsbdf")
+fmt.Println(cats)
 
 }
 
