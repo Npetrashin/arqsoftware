@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	
-	"ioutil"
+	"io/ioutil"
 	"net/http"
 )
 type Categories []Category
