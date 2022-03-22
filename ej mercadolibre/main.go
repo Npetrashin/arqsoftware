@@ -20,10 +20,10 @@ func GetCategories(siteID string) (Categories, error){
 response,err  := http.Get("https://api.mercadolibre.com/sites/MLA/Categories")
 
 
-bytes:=ioutil.ReadAll(response.bytes)
+bytes,err:=ioutil.ReadAll(response.Body)
 
 var cats Categories
-json.Unmarshal(bytes, &cats)
+err= json.Unmarshal(bytes, &cats)
 
 return cats, err
 }
