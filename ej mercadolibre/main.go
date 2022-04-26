@@ -28,12 +28,22 @@ err= json.Unmarshal(bytes, &cats)
 return cats, err
 }
 func main(){
+	var categorias Categories
+	var i int 
+	for true{
 cats,err :=GetCategories("MLA")
-
-if err==nil{
-fmt.Println("ERROR")
+if err=nil{
+	fmt.Println("ERROR")
+  break 
 }
-fmt.Println(cats)
+categorias[i]=cats
+i++
+
+}
+fmt.Println(categorias[1])
+
+
+
 
 }
 

@@ -5,24 +5,21 @@ import (
 	"fmt"
 )
 
-func division(a float32, b float32) (float32, error) {
+func Division(a int, b int) (int, error) {
 	var err error = nil
 	if b == 0 {
 		err = errors.New("Division indefinida")
 		return 0, err
 	}
-	resultado := a / b
 
-	return resultado, err
+	return a/b, nil
 }
-
 func main() {
-	div, err := division(5, 3)
+	div, err := Division(12, 4)
 	if err != nil {
 		fmt.Println("No se puede dividir. Error:", err.Error())
 
 	}
 
 	fmt.Println("division: ", div)
-
 }
